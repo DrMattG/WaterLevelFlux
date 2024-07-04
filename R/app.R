@@ -2,7 +2,8 @@ library(shiny)
 library(leaflet)
 library(DT)
 library(tidyverse)
-sfc <- readRDS("C:/Users/matthew.grainger/Documents/Projects_in_development/WaterLevelFlux/sfc.RDS")
+library(sf)
+sfc <- readRDS(paste0(here::here(), "/data/sfc.RDS"))
 shiny::shinyApp(
   ui = fluidPage(
     column(
